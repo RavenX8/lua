@@ -1,0 +1,81 @@
+﻿Build started 5/9/2016 10:50:15 PM.
+     1>Project "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\build\lua.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule C:/Users/redfl/git/RavenX8/osIROSE-new/3rdparty/src/lua-5.3.2/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\build\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"lua.dir\Debug\\" /Fd"lua.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lapi.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lauxlib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lbaselib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lbitlib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lcode.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lcorolib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lctype.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\ldblib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\ldebug.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\ldo.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\ldump.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lfunc.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lgc.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\linit.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\liolib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\llex.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lmathlib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lmem.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\loadlib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lobject.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lopcodes.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\loslib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lparser.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lstate.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lstring.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lstrlib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\ltable.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\ltablib.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\ltm.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lundump.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lvm.c" "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\src\lzio.c"
+         lapi.c
+         lauxlib.c
+         lbaselib.c
+         lbitlib.c
+         lcode.c
+         lcorolib.c
+         lctype.c
+         ldblib.c
+         ldebug.c
+         ldo.c
+         ldump.c
+         lfunc.c
+         lgc.c
+         linit.c
+         liolib.c
+         llex.c
+         lmathlib.c
+         lmem.c
+         loadlib.c
+         lobject.c
+         Generating Code...
+         Compiling...
+         lopcodes.c
+         loslib.c
+         lparser.c
+         lstate.c
+         lstring.c
+         lstrlib.c
+         ltable.c
+         ltablib.c
+         ltm.c
+         lundump.c
+         lvm.c
+         lzio.c
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\build\lib\Debug\lua.lib" /NOLOGO lua.dir\Debug\lapi.obj
+         lua.dir\Debug\lauxlib.obj
+         lua.dir\Debug\lbaselib.obj
+         lua.dir\Debug\lbitlib.obj
+         lua.dir\Debug\lcode.obj
+         lua.dir\Debug\lcorolib.obj
+         lua.dir\Debug\lctype.obj
+         lua.dir\Debug\ldblib.obj
+         lua.dir\Debug\ldebug.obj
+         lua.dir\Debug\ldo.obj
+         lua.dir\Debug\ldump.obj
+         lua.dir\Debug\lfunc.obj
+         lua.dir\Debug\lgc.obj
+         lua.dir\Debug\linit.obj
+         lua.dir\Debug\liolib.obj
+         lua.dir\Debug\llex.obj
+         lua.dir\Debug\lmathlib.obj
+         lua.dir\Debug\lmem.obj
+         lua.dir\Debug\loadlib.obj
+         lua.dir\Debug\lobject.obj
+         lua.dir\Debug\lopcodes.obj
+         lua.dir\Debug\loslib.obj
+         lua.dir\Debug\lparser.obj
+         lua.dir\Debug\lstate.obj
+         lua.dir\Debug\lstring.obj
+         lua.dir\Debug\lstrlib.obj
+         lua.dir\Debug\ltable.obj
+         lua.dir\Debug\ltablib.obj
+         lua.dir\Debug\ltm.obj
+         lua.dir\Debug\lundump.obj
+         lua.dir\Debug\lvm.obj
+         lua.dir\Debug\lzio.obj
+         lua.vcxproj -> C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\build\lib\Debug\lua.lib
+     1>Done Building Project "C:\Users\redfl\git\RavenX8\osIROSE-new\3rdparty\src\lua-5.3.2\build\lua.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.24
