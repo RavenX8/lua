@@ -10,6 +10,22 @@ SET(CMAKE_BUILD_TYPE $ENV{BUILD_TYPE})
 
 IF (${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
 
+IF($(CMAKE_BUILD_TYPE) STREQUAL DEBUG)
+	add_definitions(-D_LIB)
+	add_definitions(-D_DEBUG)
+	add_definitions(-D_WIN32)
+
+	set(CMAKE_CXX_FLAGS " /Od /EHsc /MTd /Zi /GR /nologo /RTC1")
+	set(MSVC_LINK_FLAGS " /DEBUG /INCREMENTAL")
+ELSE()
+    add_definitions(-D_LIB)
+    add_definitions(-D_WIN32)
+	add_definitions(-DNDEBUG)
+
+	set(CMAKE_CXX_FLAGS " /Ox /EHsc /MT /GL /GR /nologo")
+	set(MSVC_LINK_FLAGS " /RELEASE /LTCG /INCREMENTAL:NO /NOLOGO")
+ENDIF()
+
 #foreach(flag_var
 #        CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE
 #        CMAKE_CXX_FLAGS_MINSIZEREL CMAKE_CXX_FLAGS_RELWITHDEBINFO)
