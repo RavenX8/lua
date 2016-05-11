@@ -1,9 +1,5 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
-#SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-#SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-#SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
 project("lua")
 
 SET(CMAKE_BUILD_TYPE $ENV{BUILD_TYPE})
@@ -17,14 +13,14 @@ IF($(CMAKE_BUILD_TYPE) STREQUAL DEBUG)
 	add_definitions(-D_DEBUG)
 	add_definitions(-D_WIN32)
 
-	set(CMAKE_CXX_FLAGS " /Od /EHsc /Zi /GR /nologo /RTC1")
+	set(CMAKE_CXX_FLAGS " /Od /EHsc /MTd /Zi /GR /nologo /RTC1")
 	set(MSVC_LINK_FLAGS " /DEBUG /INCREMENTAL")
 ELSE()
     add_definitions(-D_LIB)
     add_definitions(-D_WIN32)
 	add_definitions(-DNDEBUG)
 
-	set(CMAKE_CXX_FLAGS " /Ox /EHsc /GL /GR /nologo")
+	set(CMAKE_CXX_FLAGS " /Ox /EHsc /MT /GL /GR /nologo")
 	set(MSVC_LINK_FLAGS " /RELEASE /LTCG /INCREMENTAL:NO /NOLOGO")
 ENDIF()
 
