@@ -1,10 +1,20 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
+option(lua_MSVC_STATIC_RUNTIME "Link static runtime libraries" ON)
+
+if (MSVC AND lua_MSVC_STATIC_RUNTIME)
+    foreach(flag_var
+        CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE
+        CMAKE_CXX_FLAGS_MINSIZEREL CMAKE_CXX_FLAGS_RELWITHDEBINFO)
+      if(${flag_var} MATCHES "/MD")
+        string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
+      endif(${flag_var} MATCHES "/MD")
+    endforeach(flag_var)
+endif (MSVC AND lua_MSVC_STATIC_RUNTIME)
+
 project("lua")
 
 SET(CMAKE_BUILD_TYPE $ENV{BUILD_TYPE})
-
-option(lua_MSVC_STATIC_RUNTIME "Link static runtime libraries" ON)
 
 IF (${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
 
@@ -25,16 +35,6 @@ ELSE()
 ENDIF()
 
 ENDIF()
-
-if (MSVC AND lua_MSVC_STATIC_RUNTIME)
-    foreach(flag_var
-        CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE
-        CMAKE_CXX_FLAGS_MINSIZEREL CMAKE_CXX_FLAGS_RELWITHDEBINFO)
-      if(${flag_var} MATCHES "/MD")
-        string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
-      endif(${flag_var} MATCHES "/MD")
-    endforeach(flag_var)
-endif (MSVC AND lua_MSVC_STATIC_RUNTIME)
 
 SET( SOURCES_BASE
 	src/lapi.c
