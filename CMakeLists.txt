@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 option(lua_MSVC_STATIC_RUNTIME "Link static runtime libraries" ON)
 
@@ -70,6 +70,9 @@ SET( SOURCES_BASE
 	src/lutf8lib.c
     src/lvm.c
     src/lzio.c
+)
+
+set( SOURCE_HEADERS
     src/lapi.h
     src/lauxlib.h
     src/lcode.h
@@ -97,4 +100,23 @@ SET( SOURCES_BASE
     src/lzio.h
 )
 
-add_library(lua STATIC ${SOURCES_BASE})
+add_library(lua STATIC ${SOURCES_BASE} ${SOURCE_HEADERS})
+
+include(GNUInstallDirs)
+
+install(TARGETS lua
+    EXPORT lua-export
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+install(FILES ${SOURCE_HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+
+install(EXPORT lua-export
+  FILE
+    LuaTargets.cmake
+  NAMESPACE
+    lua::
+  DESTINATION
+    ${CMAKE_INSTALL_LIBDIR}/cmake/Lua
+)
